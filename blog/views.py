@@ -2,16 +2,16 @@ from django.shortcuts import render
 
 posts = [
     {
-        'author':'auth1',
-        'title' : 'title1',
-        'content': 'post 1 content',
-        'posted': '1st April 1989'
+        'author':'John Smith',
+        'title' : 'Penguins',
+        'content': 'I like penguins',
+        'posted': '1st April 2023'
     },
     {
-        'author':'auth2',
-        'title' : 'title2',
-        'content': 'post 2 content',
-        'posted': '2nd April 1991'
+        'author':'Jane Doe',
+        'title' : 'Turtles',
+        'content': 'that\'s a cute turtle',
+        'posted': '2nd April 2023'
     }
 ]
 
