@@ -6,7 +6,7 @@
         <div class="media-body">
           <div class="article-metadata d-flex justify-content-between">
             <a style="color: #b56576;" class="mr-2" href="#">{{ post.author }}</a>
-            <small class="text-muted">{{ post.posted }}</small>
+            <small class="text-muted">{{ post.posted | date:"d F, Y"}}</small>
           </div>
           <h2 style="font-family: 'Playfair Display', serif;"><a class="article-title" href="#">{{ post.title }}</a></h2>
           <p style="font-family: 'Poppins', sans-serif;" class="article-content">{{ post.content }}</p>
