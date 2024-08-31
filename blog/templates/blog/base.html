@@ -14,17 +14,18 @@
     <!--google fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
     {% if title %}
-        <title>Blog - {{title}}</title>
+        <title>StoryHub - {{title}}</title>
     {% else %}
-        <title>Blog</title>
+        <title>StoryHub</title>
     {% endif %}
-</head>
+</head> 
 <body>
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-blue fixed-top">
           <div class="container">
-            <a style="font-family: 'Audiowide', sans-serif;" class="navbar-brand mr-4" href="{% url 'blog-home' %}">MuseMind<i class="bi bi-vector-pen"></i></a>
+            <a style="font-family: 'New Amsterdam', sans-serif;" class="navbar-brand mr-4" href="{% url 'blog-home' %}">StoryHub<i class="bi bi-vector-pen"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,6 +44,15 @@
         </nav>
     </header>
     <main style="margin-top: 80px;" role="main" class="container">
+      <div style="text-align: center;">
+        {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{message.tags}}">
+            {{message}}
+          </div>
+          {% endfor %}
+        {% endif %}
+      </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="content-section">
