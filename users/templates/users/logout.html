@@ -1,12 +1,9 @@
 {% extends 'blog/base.html' %}
 {% block content %}
 <h2>You have been logged out</h2>
-<form id="logoutForm" action="{% url 'logout' %}" method="POST">
-    {% csrf_token %}
 <div class="border-top pt-3">
     <small class="text-muted">
         Click here to <a class="ml-2" href="{% url 'login' %}">Log In Again</a>
     </small>
 </div>
-</form>
 {% endblock content %}
