@@ -9,7 +9,37 @@
         <p class="text-secondary">{{ user.email }}</p>
         <p class="text-secondary">{{ user.profile.bio }}</p>
       </div>
+      <button onclick="toggle()" id="edit-button" class="btn btn-outline-info"><i class="bi bi-pencil"></i>Edit</button>
     </div>
-    <!-- FORM HERE -->
+    <div id="update-form" style="display: none;">
+    <form action="#" method="POST" enctype="multipart/form-data">   <!--for saving updation of img-->
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Edit Profile</legend>
+            {{ u_form.username|as_crispy_field }}
+            {{ u_form.email|as_crispy_field }}
+            {{ p_form.image|as_crispy_field }}
+            {{ p_form.bio|as_crispy_field }}
+        </fieldset>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-info">Update</button>
+        </div>
+    </form>
+        <button onclick="toggle()" style="display: block; text-align: right;" class="btn btn-outline-danger ml-auto"><i class="bi bi-x"></i>Cancel</button>
+    </div>
   </div>
+
+  <script>
+    function toggle(){
+        var e = document.getElementById("edit-button");
+        var x = document.getElementById("update-form");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            e.style.display = "none";
+        } else {
+            x.style.display = "none";
+            e.style.display = "block";
+        }
+    }
+  </script>
 {% endblock content %}
