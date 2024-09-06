@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<article class="media content-section">
+    <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}" alt="user profile pic">
+    <div class="media-body">
+        <div class="article-metadata d-flex justify-content-between">
+        <a style="color: #b56576;" class="mr-2" href="#">{{ object.author }}</a>
+        <small class="text-muted">{{ object.posted | date:"d F, Y"}}</small>
+        </div>
+        <h2 class="article-title" style="font-family: 'Playfair Display', serif;">{{ object.title }}</h2>
+        <p style="font-family: 'Poppins', sans-serif;" class="article-content">{{ object.content }}</p>
+    </div>
+</article>
+{% endblock %}
