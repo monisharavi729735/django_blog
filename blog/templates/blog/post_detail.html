@@ -5,7 +5,7 @@
     <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}" alt="user profile pic">
     <div class="media-body">
         <div class="article-metadata d-flex justify-content-between">
-        <a style="color: #b56576;" class="mr-2" href="#">{{ object.author }}</a>
+        <a style="color: #b56576;" class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
         <small class="text-muted">{{ object.posted | date:"d F, Y"}}</small>
         </div>
         {% if object.author == user %}
@@ -18,4 +18,33 @@
         <p style="font-family: 'Poppins', sans-serif;" class="article-content">{{ object.content }}</p>
     </div>
 </article>
+<h1 class="mb-2">Comments</h1>
+
+<!-- Add Comment Form -->
+<form method="POST" action=".">
+    {% csrf_token %}
+    <div class="form-group">
+        <textarea name="comment" class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mb-4">Add Comment</button>
+</form>
+
+{% for comment in post.comments.all|slice:"::-1" %}
+    <article class="media content-section">
+    <img class="rounded-circle article-img" src="{{ comment.author.profile.image.url }}" alt="user profile pic">
+    <div class="media-body">
+        <div class="article-metadata d-flex justify-content-between">
+            <a style="color: #b56576;" class="mr-2" href="{% url 'user-posts' comment.author.username %}">{{ comment.author.username }}</a>
+            <small class="text-muted">{{ comment.created_at | date:"d F, Y"}}</small>
+        </div>
+        <p>{{ comment.content }}</p>
+        {% if comment.author == user %}
+        <div class="text-right mt-2">
+            <a href="{% url 'comment-delete' comment.pk %}" class="btn btn-danger btn-sm">Delete</a>
+        </div>
+        {% endif %}
+    </div>
+</article>
+{% endfor %}
+
 {% endblock %}
