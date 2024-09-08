@@ -29,6 +29,11 @@
     <button type="submit" class="btn btn-primary mb-4">Add Comment</button>
 </form>
 
+{% if object.comments.count == 0 %}
+<article class="media content-section">
+    <p>It looks like no one has commented yet. Be the first to share your thoughts!</p>
+</article>
+{% else %}
 {% for comment in post.comments.all|slice:"::-1" %}
     <article class="media content-section">
     <img class="rounded-circle article-img" src="{{ comment.author.profile.image.url }}" alt="user profile pic">
@@ -46,5 +51,6 @@
     </div>
 </article>
 {% endfor %}
+{% endif %}
 
 {% endblock %}
