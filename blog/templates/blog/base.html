@@ -73,20 +73,17 @@
                   <p class='text-muted'>Here are some quick links:
                     <ul class="list-group">
                       <li class="list-group-item list-group-item-light">
-                        <a href="{% url 'user-posts' user.username %}">Your Posts</a>
-                      </li>
-                      <li class="list-group-item list-group-item-light">
-                        <a href="{% url 'profile' %}?edit=true">
+                        <a style="color: #042483;" href="{% url 'profile' %}?edit=true">
                           Edit Profile
                         </a>
                       </li>
                       <li class="list-group-item list-group-item-light">
-                        <a href="{% url 'post-create' %}">New Post</a>
+                        <a style="color: #042483;" href="{% url 'post-create' %}">New Post</a>
                       </li>
                     </ul>
                   </p>
                   <hr>
-                  <h4 style="font-family: 'Cedarville Cursive', cursive; font-size:xx-large;">Inspirational Quote</h4>
+                  <h4 style="font-family: 'Cedarville Cursive', cursive; font-size:xx-large; border-bottom: 1px solid #000000">Inspirational Quote:</h4>
                   <blockquote class="blockquote">
                       <p class="mb-0">{{ quote_of_the_day }}</p>
                   </blockquote>
