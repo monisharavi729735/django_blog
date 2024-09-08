@@ -4,23 +4,20 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://drive.google.com/file/d/1iJxSy9YWV8wfiaS7MmrQsgl1GoI1aC7n/view?usp=sharing" alt="project-screenshot" width="1000" height="1000/">
+![project-screenshot](https://i.imgur.com/pv63QaY.png)
 
-<img src="https://drive.google.com/file/d/1aXLAWWyq8eLpC6w7zFEHw_bN_-RJ3KVm/view?usp=drive_link" alt="project-screenshot" width="1000" height="1000/">
+![project-screenshot](https://i.imgur.com/p0GyDwc.png)
 
-<img src="https://drive.google.com/file/d/1-_4ra87zU5conUO-o8vyg2UozkyCrj8_/view?usp=drive_link" alt="project-screenshot" width="1000" height="1000/">
+![project-screenshot](https://i.imgur.com/yWFXmFP.png)
 
-<img src="https://drive.google.com/file/d/1G2AAWfEA4EyncFapNbI18Mv_O16B7xri/view?usp=drive_link" alt="project-screenshot" width="1000" height="1000/">
+![project-screenshot](https://i.imgur.com/Ji3ZDlB.png)
 
-<img src="https://drive.google.com/file/d/1Kaa8ygZFehIeinxV1wEuyN_rJWQ6KIJO/view?usp=drive_link" alt="project-screenshot" width="1000" height="1000/">
+![project-screenshot](https://i.imgur.com/xWGestk.png)
 
-<img src="https://drive.google.com/file/d/1uyhF4S_NpaPKbLhQ9zlYyOvsb1GAi0f0/view?usp=drive_link" alt="project-screenshot" width="1000" height="1000/">
+![project-screenshot](https://i.imgur.com/LiR7z9R.png)
 
-<img src="https://drive.google.com/file/d/1NNbiVvCLAl0UJR5-ZKK8wdCzucqoL35b/view?usp=drive_link" alt="project-screenshot" width="1000" height="1000/">
+![project-screenshot](https://i.imgur.com/rMlA66I.png)
 
-<img src="https://drive.google.com/file/d/1ESj4XtCPOJe2MLU_g62U9oZdYIkRv8d5/view?usp=drive_link" alt="project-screenshot" width="1000" height="1000/">
-
-  
   
 <h2>🧐 Features</h2>
 
