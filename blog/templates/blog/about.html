@@ -1,7 +1,37 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h1>Blog about page with template rendering</h1>
+<article class="media content-section">
+<div class="container mt-4 mb-4">
+    <h1 class="text-center mb-4">About Our Website</h1>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>How We Use Django</h2>
+            <p>
+                Our website is built using Django, a powerful Python web framework that enables us to create robust and scalable web applications efficiently. Django provides an elegant way to manage various aspects of web development, including database handling, user authentication, and form processing.
+            </p>
+            <p>
+                By leveraging Django's features, we have developed a fully functional web application with a clean and maintainable codebase. The framework's built-in admin interface, user management capabilities, and templating system have been crucial in shaping the functionality and user experience of our site.
+            </p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>User Registration and Authentication:</strong> Secure user account creation, login, and profile management.</li>
+            <li><strong>Profile Management:</strong> Users can update their profile details, including profile pictures and bios.</li>
+            <li><strong>Post Creation and Management:</strong> Users can create, edit, and delete posts with ease.</li>
+            <li><strong>Search Functionality:</strong> Easily search for posts or information on the site.</li>
+            <li><strong>Comments:</strong> Engage with content by commenting on posts.</li>
+            <li><strong>Email Notifications:</strong> Automated emails for password resets and account updates.</li>
+            <li><strong>Pagination:</strong> Efficiently browse through large volumes of content with pagination.</li>
+            <li><strong>Inspirational Quote: </strong>A "Inspirational Quote" section, displaying quotes from an external API on every refresh.</li>
+        </ul>
+    </div>
+</div>
+</article>
 {% endblock %}
 
     

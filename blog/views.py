@@ -10,6 +10,7 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 )
+import requests
 
 from .models import Post, Comment
 
@@ -22,6 +23,18 @@ def home(request):
     }
     return render(request, 'blog/home.html', context)
 
+def get_quote_of_the_day():
+    try:
+        # Example using ZenQuotes API
+        response = requests.get('https://zenquotes.io/api/today')
+        if response.status_code == 200:
+            quote = response.json()[0]  # The API returns a list of quotes
+            return f"{quote['q']} - {quote['a']}"
+        else:
+            return "Unable to fetch quote at the moment."
+    except requests.exceptions.RequestException as e:
+        return f"Error fetching quote: {e}"
+
 # class based view, fewer lines of code if naming convention followed
 class PostListView(ListView):
     model = Post
@@ -29,6 +42,12 @@ class PostListView(ListView):
     context_object_name = 'posts'    # equivalent to context in fn views, default name = object
     ordering = ['-posted']      # newest to oldest
     paginate_by = 5
+    
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query:
+            return Post.objects.filter(title__icontains=query).order_by('-posted')
+        return Post.objects.all().order_by('-posted')
     
     
 class UserPostListView(ListView):

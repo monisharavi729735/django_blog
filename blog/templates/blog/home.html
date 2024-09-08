@@ -1,6 +1,11 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+  <form method="GET" action="" class="mb-4 d-flex justify-content-between">
+    <input type="text" class="form-control rounded-pill border-secondary mr-2" name="q" placeholder="Search for posts...">
+    <button type="submit" class="btn btn-outline-info">Search</button>
+  </form>
+
     {% for post in posts %}
     <article class="media content-section">
       <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}" alt="user profile pic">

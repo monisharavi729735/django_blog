@@ -41,5 +41,12 @@
             e.style.display = "block";
         }
     }
+
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('edit')) {
+            toggle();
+        }
+    }
   </script>
 {% endblock content %}

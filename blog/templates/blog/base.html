@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
     {% if title %}
         <title>StoryHub - {{title}}</title>
     {% else %}
@@ -68,14 +70,26 @@
             <div class="col-md-4">
                 <div class="content-section">
                   <h3>Welcome {{user.username}}</h3>
-                  <p class='text-muted'>You can put any information here you'd like.
+                  <p class='text-muted'>Here are some quick links:
                     <ul class="list-group">
-                      <li class="list-group-item list-group-item-light">Latest Posts</li>
-                      <li class="list-group-item list-group-item-light">Announcements</li>
-                      <li class="list-group-item list-group-item-light">Calendars</li>
-                      <li class="list-group-item list-group-item-light">etc</li>
+                      <li class="list-group-item list-group-item-light">
+                        <a href="{% url 'user-posts' user.username %}">Your Posts</a>
+                      </li>
+                      <li class="list-group-item list-group-item-light">
+                        <a href="{% url 'profile' %}?edit=true">
+                          Edit Profile
+                        </a>
+                      </li>
+                      <li class="list-group-item list-group-item-light">
+                        <a href="{% url 'post-create' %}">New Post</a>
+                      </li>
                     </ul>
                   </p>
+                  <hr>
+                  <h4 style="font-family: 'Cedarville Cursive', cursive; font-size:xx-large;">Inspirational Quote</h4>
+                  <blockquote class="blockquote">
+                      <p class="mb-0">{{ quote_of_the_day }}</p>
+                  </blockquote>
                 </div>
             </div>
             <div class="col-md-8">
